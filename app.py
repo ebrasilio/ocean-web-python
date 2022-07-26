@@ -1,22 +1,24 @@
-from flask import Flask
+from flask import Flask, render_template, request
+from datetime import datetime
 
 app = Flask("hello")
 
-@app.route("/") # raiz 
-@app.route("/hello")
-def hello():
-    return """<html>
-    <h1><mark>"Hello world !! Again"</mark></h1>
-    </html>"""
+# mock ==> simulação
+posts = [
+    {
+        "title": "My first post",
+        "body": "Here, my text",
+        "author": "Me",
+        "created": datetime(2022,7,25)
+    },
+    {
+        "title": "My second post",
+        "body": "Here, my text again",
+        "author": "Not Me",
+        "created": datetime(2022,7,26)  
+    }
+]
 
-@app.route("/meucontato")
-def meuContato():
-    return """<html>
-    <head>
-    <title>Contatos</title>
-    </head>
-    <body>
-    <h1>Emilia Brasilio</h1>
-    <mark>ebrasilio@jaja.com"</mark>
-    </body>
-    </html>"""
+@app.route("/") # raiz 
+def index():
+    return render_template("index.html", posts=posts)
