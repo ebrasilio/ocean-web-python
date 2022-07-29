@@ -3,28 +3,24 @@ html {
     background: #eee ;
     padding: 1rem;
 }
-
 body {
     max-width: 960px;
     margin: 0 auto;
     background: white;
 }
-
 h1 {
     font-family: serif;
     color: #377ba8;
     margin: 1 rem 0;
 }
-
 hr {
     border: none;
     border-top: 1px solid lightgrey;
 }
 /* Nada funcionou daqui para baixo*/
-.content{
+.content {
    padding: 0 10rem 10rem;
 }
-
 .post  > header > div:first-of-type{
     flex: auto;
 }
@@ -32,12 +28,24 @@ hr {
     color: slategray;
     font-style: italic;
 }
-
 .post .body {
     white-space: pre-line;
 }
-
 .no-posts{
     font-style: italic;
     color: gray;
+}
+/* Register */
+.content form{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+.content label{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.content input{
+    margin-bottom: 1em; 
 }
