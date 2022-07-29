@@ -17,12 +17,11 @@ hr {
     border: none;
     border-top: 1px solid lightgrey;
 }
-/* Nada funcionou daqui para baixo*/
-.content {
-   padding: 0 10rem 10rem;
+.content{
+    padding: 0 10rem 10rem;
 }
-.post  > header > div:first-of-type{
-    flex: auto;
+.post > header > div:first-of-type {
+    flex:auto;
 }
 .post .about {
     color: slategray;
