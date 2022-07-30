@@ -2,6 +2,13 @@
 
 {% block title%} Index {% endblock %}
 
+{% bloch header %} 
+    <h1>Posts</h1>    
+    {% if current_user.is.authenticated %}
+    <a class="action" href="{{ url_for('create') }}"></a>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
         <article>
